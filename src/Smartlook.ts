@@ -6,7 +6,16 @@ import { isString } from './utils';
 const SmartlookBridge = NativeModules.RNSmartlook;
 
 const REACT_NATIVE_VERSION = require('react-native/package.json').version;
-const SMARTLOOK_VERSION = require('../package.json').version;
+
+let SMARTLOOK_VERSION: string;
+
+// We have to do this because of the example project, where we are handling the library with babel-plugin-module-resolver
+// so the requiring with module name not works
+try {
+	SMARTLOOK_VERSION = require('smartlook-react-native-wrapper/package.json').version;
+} catch (e) {
+	SMARTLOOK_VERSION = require('../package.json').version;
+}
 
 const REF_NOT_INITIALIZED_ERROR =
 	"The ref hasn't been initialized yet. This might happen if it is not mounted, or if it hasn't finished mounting.";
