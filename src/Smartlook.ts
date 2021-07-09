@@ -210,37 +210,6 @@ export namespace Smartlook {
 	// SENSITIVE
 
 	/**
-	 * Starts fullscreen sensitive mode
-	 *
-	 * @category 6) Fullscreen sensitive mode
-	 */
-	//@SL_COMPATIBILITY_NAME("name=startFullscreenSensitiveMode;type=func;deprecated=yes")
-	export function startFullscreenSensitiveMode() {
-		SmartlookBridge.startFullscreenSensitiveMode();
-	}
-
-	/**
-	 * Stops fullscreen sensitive mode
-	 *
-	 * @category 6) Fullscreen sensitive mode
-	 */
-	//@SL_COMPATIBILITY_NAME("name=stopFullscreenSensitiveMode;type=func;deprecated=yes")
-	export function stopFullscreenSensitiveMode() {
-		SmartlookBridge.stopFullscreenSensitiveMode();
-	}
-
-	/**
-	 * Returns true if fullscreen sensitive mode is active
-	 *
-	 * @returns A promise fulfilled by true if fullscreen sensitive mode is active
-	 * @category 6) Fullscreen sensitive mode
-	 */
-	//@SL_COMPATIBILITY_NAME("name=isFullscreenSensitiveModeActive;type=func;returns=boolean;deprecated=yes")
-	export async function isFullscreenSensitiveModeActive(): Promise<boolean> {
-		return SmartlookBridge.isFullscreenSensitiveModeActive();
-	}
-
-	/**
 	 * @category 7) Sensitive views
 	 */
 	//@SL_COMPATIBILITY_NAME("name=registerBlacklistedView;type=func;params=blacklistedView{View}")
